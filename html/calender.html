@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>カレンダー</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
+    <style>
+    			
+    
+        .pure-g > div {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .l-box {
+    	width : 60px;
+            padding: 10px 15px;
+    	margin: 10px; 
+    	text-align: center;
+    	font-size: xx-large;
+    	background-color : #DCDCDC;
+    	border-radius: 5px;
+        }
+    
+    		</style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>
+    
+    
+    function getUrlVars()
+    {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i <hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+    
+    function NextMonth()
+    {
+    	window.location = location.protocol + "//" + location.hostname + location.pathname + "?year=" + NowYear + "&month=" + (nowMonth + 1);
+    }
+    function PreviousMonth()
+    {
+    	window.location = location.protocol + "//" + location.hostname + location.pathname + "?year=" + NowYear + "&month=" + (nowMonth - 1);
+    }
+    
+    	if( !getUrlVars()["year"]) 
+    	{
+    	nowDate = new Date();
+    	
+    	MonthTbl = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+    
+    	NowYear = nowDate.getFullYear();
+    	if (((NowYear%4)==0 && (NowYear%100)!=0) || (NowYear%400)==0){
+    		MonthTbl[1] = 29;	
+    	}
+    	nowMonth = nowDate.getMonth();
+    	nowToday = nowDate.getDate();
+    	nowDate.setDate(1);
+    	nowWeek = nowDate.getDay();
+    	nowTblLine = Math.ceil((nowWeek + MonthTbl[nowMonth])/7);
+    	DateTable = new Array( 7 * nowTblLine);
+    
+    	for( i=0; i < 7 * nowTblLine; i++) DateTable[i] = "　";
+    	for( i=0; i < MonthTbl[nowMonth]; i++) DateTable[i+nowWeek] = i + 1; 
+    	}
+    	else{
+    
+    	nowDate = new Date( parseInt(getUrlVars()["year"]), parseInt(getUrlVars()["month"]), 1);
+    	
+    	MonthTbl = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+    	NowYear = nowDate.getFullYear();
+    	if (((NowYear%4)==0 && (NowYear%100)!=0) || (NowYear%400)==0){
+    		MonthTbl[1] = 29;	
+    	}
+    
+    	nowMonth = nowDate.getMonth();
+    	nowToday = nowDate.getDate();
+    	nowDate.setDate(1);
+    	nowWeek = nowDate.getDay();
+    	nowTblLine = Math.ceil((nowWeek + MonthTbl[nowMonth])/7);
+    	DateTable = new Array( 7 * nowTblLine);
+    
+    	for( i=0; i < 7 * nowTblLine; i++) DateTable[i] = "　";
+    	for( i=0; i < MonthTbl[nowMonth]; i++) DateTable[i+nowWeek] = i + 1; 		
+    	}
+    
+    
+    </script>
+  </head>
+  <body bgcolor="#ffb6c1">
+    <h1>
+      <i class="icon-table"></i>&nbsp;カレンダー
+    </h1>
+    <script>document.write("<h2>", NowYear, "年", nowMonth+1,"月</h2>");</script>
+    <div class="pure-g">
+      <div class="pure-u-1-2 ">
+        <button id="PrevMnt" class="pure-button" onClick="PreviousMonth();">
+          <i class="icon-long-arrow-left"></i>前の月
+        </button>
+      </div>
+      <div class="pure-u-1-2 ">
+        <button id="NextMnt" class="pure-button" onClick="NextMonth();">次の月
+          <i class="icon-long-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-7 l-box" style="color: red;">日</div>
+      <div class="pure-u-1-7 l-box">月</div>
+      <div class="pure-u-1-7 l-box">火</div>
+      <div class="pure-u-1-7 l-box">水</div>
+      <div class="pure-u-1-7 l-box">木</div>
+      <div class="pure-u-1-7 l-box">金</div>
+      <div class="pure-u-1-7 l-box" style="color: blue;">土</div>
+    </div>
+    <script>
+    
+    for( i = 0; i < nowTblLine; i++){
+    
+    	document.write( "<div class='pure-g'>");
+    	for( j = 0; j < 7; j++){
+    		document.write("<div class='pure-u-1-7 l-box'>", DateTable[ i * 7 + j],"</div>");
+    	}
+    	document.write("</div>");
+    }
+    
+    
+    </script>
+  </body>
+</html>

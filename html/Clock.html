@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="stylesheet" type="text/css" href="Clock.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+<meta charset="utf-8">
+<title>時計</title>
+<script type="text/javascript">
+<!--
+setInterval ( 'clocknow()',1000 );
+function clocknow(){
+weeks = new Array("<niti> 日曜日 </niti>","<getu> 月曜日 </getu>","<ka> 火曜日 </ka>","<sui> 水曜日 </sui>","<moku> 木曜日 </moku>","<kin> 金曜日 </kin>","<sat> 土曜日 </sat>") ;
+now = new Date() ;
+year = now.getFullYear() ;
+month = now.getMonth() + 1 ;
+day = now.getDate() ;
+weak = weeks[now.getDay()] ;
+hour = now.getHours();
+minute = now.getMinutes();
+second = now.getSeconds();
+if ( month < 10 ) { month = "0" + month ; }
+if ( day < 10 ) { day = "0" + day ; }
+if ( hour < 10 ) { hour = "0" + hour ; }
+if ( minute < 10 ) { minute = "0" + minute ; }
+if ( second < 10 ) { second = "0" + second ; }
+document.getElementById("content").innerHTML = "<span id="+ "date" +">" + year + "年" + month + "月" + day + "日(" + weak  + ")</span><span id=" + "time" + ">" + "<br>" + hour + "時" + minute + "分" + second + "秒";
+}
+</script>
+</head>
+<body>
+<tokei>時計</tokei>
+<br>
+<div id="wrapper">
+<header id="header">
+</header> 
+<div id="main">
+<div id="content"></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+			<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+			<link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>main</title>
+			<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+
+
+
+		<style>
+			.h1{
+				margin: 0.3em;
+			}
+
+			/*
+			ボタン関連の設定
+			*/
+			.pure-button-1{
+				background-color: #FF69B4;
+				height: 10em;
+				width: 15em;
+				margin: 1em;
+			}
+			.pure-button-1:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
+			.pure-button-1-small{
+				background-color: #FF69B4;
+				height: 8em;
+				width: 8em;
+				margin: 1em;
+			}
+			.pure-button-1-small:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
+
+			.pure-button-2{
+				background-color: #ba55d3;
+				height: 10em;
+				width: 15em;
+				margin: 1em;
+			}
+			.pure-button-2:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
+			.pure-button-2-small{
+				background-color: #ba55d3;
+				height: 8em;
+				width: 8em;
+				margin: 1em;
+			}
+			.pure-button-2-small:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
+
+			.pure-button-3{
+				background-color: #ff00ff;
+				height: 10em;
+				width: 15em;
+				margin: 1em;
+			}
+			.pure-button-3:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
+			.pure-button-3-small{
+				background-color: #ff00ff;
+				height: 8em;
+				width: 8em;
+				margin: 1em;
+			}
+			.pure-button-3-small:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
+
+			.footer-button{
+				height: 20%;
+				background-color: #9370DB;
+				mergin:;
+			}
+			.footer-button:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
+
+			.icon{
+				font-size: 9em;
+				color: white;
+							}
+			.icon-mini{
+				font-size: 8em;
+				color: white;
+			}
+
+			.main-grid{
+				margin-left: 5em
+			}
+
+			.sub-grid{
+				margin-left: 5em;
+			}
+
+		/*
+		ヘッダー・フッターの設定
+		*/
+
+		body{
+		    margin: 0;
+		    padding: 4em 0 4em 0;
+		}
+		* html body{
+		    overflow: hidden;
+		}
+		div#headerArea {
+		    position: fixed !important;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 7%;
+		    background-color: #ffe8ec;
+		    color: #fff;
+		    font-family: 'Oxygen', sans-serif;
+		    font-size: 2em;
+		}
+		div#footerArea {
+		    position: fixed !important;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 17%;
+		    background-color: #ffe8ec;
+		    color: #fff;
+		}
+		* html div#contentsArea{
+		    height: 100%;
+		    overflow: auto;
+		}
+
+
+		</style>
+	</head>
+
+	<body bgcolor="#ffb6c1">
+
+
+		<div id="headerArea" >Windows8</div>
+
+		<div id="footerArea">
+		<div pure-g>
+			<div pure-u-1-4>
+				<a class="pure-button footer-button " href="#">SP</a>
+
+				<a class="pure-button footer-button" href="#">SM</a>
+
+				<a class="pure-button footer-button" href="#">FA</a>
+
+				<a class="pure-button footer-button" href="#">WI</a>
+			</div>
+		</div>
+		</div>
+
+
+		<div class="pure-g  main-grid">
+			<div class="pure-u-1-3 ">
+				<a class="pure-button pure-button-1" href="Clock.html"><i class="icon-time icon"></i></a>
+			</div>
+			<div class="pure-u-1-3">
+				<a class="pure-button pure-button-3"href="http://www.apple.com/ios/"><i class="icon-apple icon"></i></a>
+			</div>
+			<div class="pure-u-1-3">
+				<a class="pure-button pure-button-2"href="calender.html"><i class="icon-calendar icon"></i></a>
+			</div>
+		</div>
+
+		<div class="pure-g sub-grid">
+			<div class="pure-u-1-4 ">
+				<a class="pure-button pure-button-1-small" href="dentaku.html"><i class="icon-jpy icon-mini"></i></a>
+			</div>
+			<div class="pure-u-1-4">
+				<a class="pure-button pure-button-3-small"href="#"><i class="icon-tasks icon-mini"></i></a>
+			</div>
+			<div class="pure-u-1-4">
+				<a class="pure-button pure-button-2-small"href="Memo.html"><i class="icon-edit icon-mini"></i></a>
+			</div>
+			<div class="pure-u-1-4 ">
+				<a class="pure-button pure-button-1-small" href="Stopwatch.html"><i class="icon-flag-checkered icon-mini"></i></a>
+			</div>
+		</div>
+
+		<br><br><br><br><br><br>
+	</body>
+</html>

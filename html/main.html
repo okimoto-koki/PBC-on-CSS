@@ -9,40 +9,78 @@
 			.h1{
 				margin: 0.3em;
 			}
+
+			/*
+			ボタン関連の設定
+			*/
 			.pure-button-1{
 				background-color: #ffffff;
-				height: 7em;
-				width: 7em;
+				height: 10em;
+				width: 15em;
 				margin: 1em;
 			}
 			.pure-button-1:hover{
 				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
 			}
+			.pure-button-1-small{
+				background-color: #ffffff;
+				height: 8em;
+				width: 8em;
+				margin: 1em;
+			}
+			.pure-button-1-small:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
 
 			.pure-button-2{
 				background-color: #ba55d3;
-				height: 7em;
-				width: 7em;
+				height: 10em;
+				width: 15em;
 				margin: 1em;
 			}
 			.pure-button-2:hover{
 				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
 			}
+			.pure-button-2-small{
+				background-color: #ba55d3;
+				height: 8em;
+				width: 8em;
+				margin: 1em;
+			}
+			.pure-button-2-small:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
 
 			.pure-button-3{
 				background-color: #ff00ff;
-				height: 7em;
-				width: 7em;
+				height: 10em;
+				width: 15em;
 				margin: 1em;
 			}
 			.pure-button-3:hover{
 				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
 			}
+			.pure-button-3-small{
+				background-color: #ff00ff;
+				height: 8em;
+				width: 8em;
+				margin: 1em;
+			}
+			.pure-button-3-small:hover{
+				background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+			}
 
+			.footer-button{
+				height: 20%;
+			}
+
+		/*
+		ヘッダー・フッターの設定
+		*/
 
 		body{  
 		    margin: 0;  
-		    padding: 100px 0 50px 0;  
+		    padding: 4em 0 4em 0;  
 		}  
 		* html body{  
 		    overflow: hidden;  
@@ -53,7 +91,7 @@
 		    top: 0;  
 		    left: 0;  
 		    width: 100%;  
-		    height: 3em;  
+		    height: 7%;  
 		    background-color: #ffe8ec;  
 		    color: #fff;  
 		}  
@@ -63,8 +101,8 @@
 		    bottom: 0;  
 		    left: 0;  
 		    width: 100%;  
-		    height: 6em;  
-		    background-color: #4E9ABE;  
+		    height: 17%;  
+		    background-color: #ffe8ec;  
 		    color: #fff;  
 		}  
 		* html div#contentsArea{  
@@ -72,11 +110,14 @@
 		    overflow: auto;  
 		}  
 
+
 		</style>
 	</head>
 
 	<body bgcolor="#ffb6c1">
-		<h1 class="h1">main page</h1>
+
+		<div id="headerArea">MainPage</div> 
+		<div id="footerArea">	<a class="pure-button footer-button" href="#">win8</a></div>  
 	
 		
 
@@ -96,22 +137,22 @@
 
 		<div class="pure-g ">
 			<div class="pure-u-1-4 ">
-				<a class="pure-button pure-button-1" href="#">Button222</a>
+				<a class="pure-button pure-button-1-small" href="#">Button222</a>
 			</div>
 		</div>
 		<div class="pure-g ">
 			<div class="pure-u-1-4">
-				<a class="pure-button pure-button-3"href="#"> Button</a>
+				<a class="pure-button pure-button-3-small"href="#"> Button</a>
 			</div>
 		</div>		
 		<div class="pure-g ">
 			<div class="pure-u-1-4">
-				<a class="pure-button pure-button-2"href="#"> Button</a>
+				<a class="pure-button pure-button-2-small"href="#"> Button</a>
 			</div>
 		</div>
 		<div class="pure-g ">
 			<div class="pure-u-1-4 ">
-				<a class="pure-button pure-button-1" href="#">Button</a>
+				<a class="pure-button pure-button-1-small" href="#">Button</a>
 			</div>
 		</div>
 

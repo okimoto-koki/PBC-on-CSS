@@ -1,0 +1,139 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+            
+<title>電卓</title>
+    <script language="JavaScript">
+    <!--
+    disp    = "0";
+    disp2    = "0";
+    flag    = 0;
+    function push(val) {
+        if(val >= 0 && val <= 9) {            //　電卓に表示する数列を作成
+            if(flag == 0) {
+                disp    = val;
+                disp2    = "0";
+                flag    = 1;
+            }
+            else {
+                disp    = disp + val;
+                disp    = parseFloat(disp);
+            }
+        }
+        else if(val == "Ｃ") {                //　クリア
+            disp    = "0";
+            disp2    = "0";
+            flag    = 0;
+        }
+        else {
+            if(disp) {
+                switch(flag) {            //　計算
+                case 1:disp2 = parseFloat(disp2) + parseFloat(disp); break;
+                case 2:disp2 = parseFloat(disp2) - parseFloat(disp); break;
+                case 3:disp2 = parseFloat(disp2) * parseFloat(disp); break;
+                case 4:disp2 = parseFloat(disp2) / parseFloat(disp); break;
+                }
+            }
+            if(val == "＝") {            //　計算方法を記憶
+                flag    = 0;
+                disp    = disp2;
+            }
+            else if(val == "＋") {
+                flag    = 1;
+                disp    = "";
+            }
+            else if(val == "－") {
+                flag    = 2;
+                disp    = "";
+            }
+            else if(val == "×") {
+                flag    = 3;
+                disp    = "";
+            }
+            else if(val == "÷") {
+                flag    = 4;
+                disp    = "";
+            }
+        }
+        document.form1.disp.value = disp        //　電卓に表示
+    }
+    //-->
+    </script>
+    <style>
+    <!--
+    input {
+        width:    100%;
+        height: 100%;
+        font-size:    30px;
+    }
+    .disp {
+        text-align:    right;
+        font-size:    3em;
+    }
+    .table{
+        margin-left: 40%;
+        margin-top: 10%;
+    }
+    .button{
+        height: 4em;
+        width: 4em;
+        background-color: #ffc1f1;
+    }
+    .button:hover{
+                background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+    }
+    .button2{
+        height: 4em;
+        width: 4em;
+        background-color: #f3c1ff;
+    }
+    .button2:hover{
+                background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+    }
+    .button3{
+        height: 4em;
+        width: 4em;
+        background-color: red;
+    }
+    .button3:hover{
+                background-image: linear-gradient(transparent,rgba(0,0,0,.0) 0%,rgba(0,0,0,.0));
+    }
+
+    //-->
+    </style>
+</head>
+<body>
+<form name="form1" action="" method="">
+<table class="table" width="20%" height="50%" border="0" bordercolor="#000000" cellspacing="0" cellpadding="0">
+    <tr>
+        <td colspan="4"><input type="text" name="disp" class="disp" value="0"></td>
+    </tr>
+    <tr>
+        <td width="25%"><input type="button" class="pure-button button"   value="7" onClick="push(this.value)"></td>
+        <td width="25%"><input type="button" class="pure-button button"   value="8" onClick="push(this.value)"></td>
+        <td width="25%"><input type="button" class="pure-button button"   value="9" onClick="push(this.value)"></td>
+        <td width="25%"><input type="button" class="pure-button button2"   value="÷" onClick="push(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" class="pure-button button"   value="4" onClick="push(this.value)"></td>
+        <td><input type="button" class="pure-button button"   value="5" onClick="push(this.value)"></td>
+        <td><input type="button" class="pure-button button"   value="6" onClick="push(this.value)"></td>
+        <td><input type="button" class="pure-button button2"   value="×" onClick="push(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" class="pure-button button"   value="1" onClick="push(this.value)"></td>
+        <td><input type="button" class="pure-button button"   value="2" onClick="push(this.value)"></td>
+        <td><input type="button" class="pure-button button"   value="3" onClick="push(this.value)"></td>
+        <td><input type="button" class="pure-button button2"   value="－" onClick="push(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" class="pure-button button"   value="0" onClick="push(this.value)"></td>
+        <td><input type="button" class="pure-button button"   value="Ｃ" onClick="push(this.value)"></td>
+        <td><input type="button" class="pure-button button"   value="＝" onClick="push(this.value)"></td>
+        <td><input type="button" class="pure-button button2"   value="＋" onClick="push(this.value)"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

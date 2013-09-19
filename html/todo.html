@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
     <style>
-    			
+		
         .pure-button-secondary {
             background: rgb(66, 184, 221); 
 	    font-size: 130%;
@@ -49,6 +49,7 @@
 
     </style>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
         <script>
     
     
@@ -103,6 +104,33 @@
 	window.location = GoUrl;
     }
 
+    function AddTodo()
+    {
+    	GoUrl = location.protocol + "//" + location.hostname + location.pathname + "?";
+	if( !getUrlVars()["tsk"]) 
+	{
+		GoUrl += "tsk=1" ;
+	}
+	else
+	{
+		GoUrl += "tsk=" + (parseInt(getUrlVars()["tsk"]) + 1) ;
+	}
+
+	for( i = 1; i <= parseInt(getUrlVars()["tsk"]); i++){
+		GoUrl += "&tskname" + i + "=" + decodeURI(getUrlVars()["tskname"+i]);
+		GoUrl += "&tskdetail" + i + "=" + decodeURI(getUrlVars()["tskdetail"+i]);
+		GoUrl += "&tskdate" + i + "=" + decodeURI(getUrlVars()["tskdate"+i]);
+	}
+	GoUrl += "&tskname" + i + "=" + document.getElementById("Todoname").value;
+	GoUrl += "&tskdetail" + i + "=" + document.getElementById("Tododetail").value;
+	GoUrl += "&tskdate" + i + "=" + document.getElementById("Tododate jquery-ui-datepicker").value;
+
+
+	window.location = GoUrl;
+    }
+
+
+
 	var Msg = "";
 
 
@@ -112,18 +140,43 @@
 
 
   </head>
-  <body>
+  <body style="margin:0 auto; width:600px; background: #FBDADE;">
 <h1 style="color: rgb(66, 184, 221);margin: 10px 10px;"><i class="icon-tasks" ></i> TODO</h1>
 
-<button class="pure-button pure-button-secondary" style="margin: 0px 10px;" ><i class="icon-plus"></i>追加</button>
+<!--<button class="pure-button pure-button-secondary" style="margin: 0px 10px;" ><i class="icon-plus"></i>追加</button>
+<br>-->
 <br>
-<br>
+
+<form class="pure-form pure-form-aligned" >
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="name">やること</label>
+            <input id="Todoname" type="text" placeholder="やること">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="detail">概要</label>
+            <input id="Tododetail" type="text" size="40" placeholder="概要">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="date">日付</label>
+            <input id="Tododate jquery-ui-datepicker" type="text" placeholder="日付">
+        </div>
+
+        <div class="pure-controls" >
+            <button type=button onclick="AddTodo();" class="pure-button pure-button-primary" style="background: rgb(66, 184, 221);" ><i class="icon-upload-alt"></i> Todoを生成</button>
+        </div>
+    </fieldset>
+</form>
+
+
 
 	<script>
 
-    	if( !getUrlVars()["tsk"]) 
+    	if( !getUrlVars()["tsk"] || getUrlVars()["tsk"] == "0") 
     	{
-		var Msg = "タスクがありません";
+		var Msg = "<h3>タスクがありません</h3>";
 	}
 	else
 	{

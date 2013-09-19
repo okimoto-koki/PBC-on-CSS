@@ -1,10 +1,15 @@
-*{font-size:25px;}
-*{background:#bbbbbb;}
+*{font-size:50px;}
+*{color:#ffffff;}
+*{text-align:center;}
+body{position:absolute; top:15%; left:15%; width:700px; height:150px;}
+*{line-height:150%;}
+*{background:#ff8800;}
 niti {color:#ff0000;}
 getu {color:#555555;}
-ka {color:#ff8c00;}
+ka {color:#ff2200;}
 sui {color:#0000ff;}
 moku {color:#00ff00;}
 kin {color:#ffd700;}
 do {color:#00ffff;}
-tokei{font-size:35px;}
+tokei{font-size:70px;}
+tokei{line-height:200%;}

@@ -1,7 +1,7 @@
-*{font-size:50px;}
+*{font-size:125%;}
 *{color:#ffffff;}
 *{text-align:center;}
-body{position:absolute; top:15%; left:15%; width:700px; height:150px;}
+body{position:absolute; top:20%; left:10%; width:75%; height:50%;}
 *{line-height:150%;}
 *{background:#ff8800;}
 niti {color:#ff0000;}
@@ -11,5 +11,5 @@ sui {color:#0000ff;}
 moku {color:#00ff00;}
 kin {color:#ffd700;}
 do {color:#00ffff;}
-tokei{font-size:70px;}
-tokei{line-height:200%;}
+tokei{font-size:300%;}
+tokei{line-height:150%;}

@@ -4,9 +4,27 @@
 <title>ストップウォッチ</title>
 <link rel="stylesheet" type="text/css" href="Stopwatch.css">
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+
+<style>
+	.start-button{
+		background-color: #4169E1;
+	}
+
+	.title-color{
+		color: #fff;
+	}
+
+	.all-padding{
+		margin-top: 0.5em;
+		margin-left: 1em;
+		margin-right: 1em;
+		margin-bottom: 0.2em;
+	}
+</style>
+
 </head>
 <body>
-<stopwatch>ストップウォッチ</stopwatch>
+<stopwatch class="title-color all-padding">Stopwatch</stopwatch>
 <script type="text/javascript"><!--
 myButton = 0;
 function myCheck(){
@@ -19,7 +37,7 @@ myInterval=setInterval("myDisp()",1);
 myDisp();
 myButton = 0;
 document.myForm.myFormButton.value = "START";
-clearInterval( myInterval ); 
+clearInterval( myInterval );
 }
 }
 function myDisp(){
@@ -35,8 +53,8 @@ document.myForm.myFormTime.value = myH+":"+myM+":"+myS+":"+myMS;
 }
 </script>
 <form name="myForm">
-<input type="text" size="28" name="myFormTime" disabled>
-<input class="pure-button pure-button-primary"input type="button" value="START" name="myFormButton" onclick="myCheck()" autocomplete=off >
+<input class="all-padding title-color" type="text" size="28" name="myFormTime" disabled>
+<input class="pure-button pure-button-primary start-button all-padding"input type="button" value="START" name="myFormButton" onclick="myCheck()" autocomplete=off >
 </readonly>
 </form>
 </body>

@@ -11,4 +11,4 @@ Windows8風Webデスクトップサイト
 * Project Manager : [okimoto-koki](https://github.com/okimoto-koki)
 * Designer 	: [TaketaHiroshi](https://github.com/TaketaHiroshi)
 * Programer 	: [Mizawa](https://github.com/Mizawa)
-* Programer	: [Takahiro Nakaoku](https://github.com/csc_kamera25) 
+* Programer	: [Takahiro Nakaoku](https://github.com/kamera25) 

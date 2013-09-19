@@ -1,7 +1,7 @@
-*{font-size:19px;}
+*{font-size:100%;}
 *{background:#00b379;}
 *{line-height:95%;}
 *{color:#ffffff;}
-body{position:absolute; top:0%; left:15%; width:700px; height:150px;}
-memo{font-size:27px;}
+body{position:absolute; top:0%; left:15%; width:50%; height:50%;}
+memo{font-size:100%;}
 memo{line-height:250%;}

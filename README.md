@@ -8,7 +8,7 @@ Windows8風Webデスクトップサイト
 * その他ソースコードは、BSD Licenseによってライセンスされます。
 
 ###製作者
-* Project Manager : [okimoto-koki]: https://github.com/okimoto-koki
-* Designer 	: [TaketaHiroshi]: https://github.com/TaketaHiroshi
-* Programer 	: [Mizawa]: https://github.com/Mizawa
-* Programer	: [Takahiro Nakaoku]: https://github.com/kamera25
+* Project Manager : [https://github.com/okimoto-koki][okimoto-koki]
+* Designer 	: [https://github.com/TaketaHiroshi][TaketaHiroshi]
+* Programer 	: [https://github.com/Mizawa][Mizawa]
+* Programer	: [https://github.com/kamera25][Takahiro Nakaoku]
